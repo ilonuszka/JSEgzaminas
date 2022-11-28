@@ -9,3 +9,24 @@ budget: number
 Metodas: 
 wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins true, kitu atveju false. 
 ------------------------------------------------------------------------------------------------------ */
+
+class Movie {
+
+    constructor(title, director, budget) {
+        this.title = title;
+        this.director = director;
+        this.budget = budget;
+
+    };
+
+    wasExpensive = function () {
+        if (this.budget > 100000000) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+};
+
+const movieMaker = new Movie('A Walk to Remember', 'A.Strong', 120000);
+console.log(movieMaker.wasExpensive(), '--> ' + movieMaker.budget + ' USD');
